@@ -1,20 +1,16 @@
 .App {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   margin: 0 auto;
-  max-width: 1300px;
+  min-width: 800px;
 }
-
-/* .container {
-  display: flex;
-  align-items: center;
-} */
 
 .header {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid rgb(194, 191, 191);
 
   padding: 15px 20px;
@@ -22,13 +18,13 @@
 
 .input-container {
   padding: 30px;
-  border: 1px solid black;
+  border: 1px;
   border-radius: 15px;
 
   display: flex;
   align-items: center;
 
-  background-color: rgb(218, 215, 215);
+  background-color: rgb(240, 237, 237);
 
   font-size: 20px;
 }
@@ -63,13 +59,59 @@
   gap: 30px;
 }
 
-.todo-box {
-  border: 2px solid wheat;
-  width: 250px;
+.list-container {
+  max-width: 1200px;
+}
 
-  padding: 20px 0 50px 70px;
+.wrapper {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.todo-container {
+  border: 4px solid wheat;
+  border-radius: 10px;
+  width: 200px;
+
+  padding: 20px 70px 50px 70px;
   word-break: break-all;
 }
 
-.list-button {
+.todo-title {
+  background-color: #facdc0;
+
+  text-align: center;
+}
+
+.todo-box h2 {
+  text-align: center;
+}
+
+.todo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.complete-button {
+  width: 130px;
+  height: 40px;
+
+  background-color: transparent;
+
+  border: 2px solid rgb(148, 235, 148);
+  border-radius: 10px;
+}
+
+.delete-button {
+  width: 130px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 2px solid rgb(226, 125, 125);
+  border-radius: 10px;
 }
