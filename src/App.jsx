@@ -74,7 +74,7 @@ const App = () => {
     <div className="App">
       <div class="container">
         <div className="header">
-          <div>My Todo List</div>
+          <div>🌞My Todo List🌞</div>
         </div>
         <div className="input-container">
           <div className="input-box">

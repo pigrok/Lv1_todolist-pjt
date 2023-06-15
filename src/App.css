@@ -73,10 +73,15 @@
 }
 
 .wrapper {
-  display: flex;
+  /* display: flex; */
   gap: 30px;
   max-width: 1200px;
   flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  margin-left: 14px;
 }
 
 .todo-container {
