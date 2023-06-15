@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button";
+import ToDoList from "./components/TodoList";
 
 const App = () => {
-  // useState를 통해 초기값을 설정
+  // useState를 통해 초기값을 설정!
   const [toDo, setToDo] = useState([
     {
       id: 1,
@@ -14,8 +15,8 @@ const App = () => {
 
     {
       id: 2,
-      title: "리액트 공부하기",
-      content: "리액트 기초를 공부해봅시다. ",
+      title: "알고리즘 문제풀기",
+      content: "프로그래머스 풀기 ",
       isDone: true,
     },
   ]);
@@ -53,7 +54,7 @@ const App = () => {
   };
 
   // 삭제 버튼
-  const clickRemoveButtonHandler1 = (id) => {
+  const clickRemoveButtonHandler = (id) => {
     const newToDoDelete = toDo.filter((toDo) => toDo.id !== id);
     setToDo(newToDoDelete);
   };
@@ -74,7 +75,6 @@ const App = () => {
       <div class="container">
         <div className="header">
           <div>My Todo List</div>
-          <div>React</div>
         </div>
         <div className="input-container">
           <div className="input-box">
@@ -97,28 +97,12 @@ const App = () => {
             {toDo.map((item) => {
               if (item.isDone === false) {
                 return (
-                  <div className="todo-container" key={item.id}>
-                    <div>
-                      <div>
-                        <h2>{item.title}</h2>
-                        <h5>{item.content}</h5>
-                      </div>
-                      <div className="todo-button">
-                        <button
-                          onClick={() => clickCancelButtonHandler(item.id)}
-                          className="complete-button"
-                        >
-                          완료
-                        </button>
-                        <button
-                          onClick={() => clickRemoveButtonHandler1(item.id)}
-                          className="delete-button"
-                        >
-                          삭제
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <ToDoList
+                    item={item}
+                    clickCancelButtonHandler={clickCancelButtonHandler}
+                    clickRemoveButtonHandler={clickRemoveButtonHandler}
+                    key={item.id}
+                  />
                 );
               }
             })}
@@ -128,28 +112,12 @@ const App = () => {
             {toDo.map((item) => {
               if (item.isDone === true) {
                 return (
-                  <div className="todo-container" key={item.id}>
-                    <div>
-                      <div>
-                        <h2>{item.title}</h2>
-                        <h5>{item.content}</h5>
-                      </div>
-                      <div className="todo-button">
-                        <button
-                          onClick={() => clickCancelButtonHandler(item.id)}
-                          className="complete-button"
-                        >
-                          {item.isDone ? "취소" : "완료"}
-                        </button>
-                        <button
-                          onClick={() => clickRemoveButtonHandler1(item.id)}
-                          className="delete-button"
-                        >
-                          삭제
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <ToDoList
+                    item={item}
+                    clickCancelButtonHandler={clickCancelButtonHandler}
+                    clickRemoveButtonHandler={clickRemoveButtonHandler}
+                    key={item.id}
+                  />
                 );
               }
             })}
