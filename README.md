@@ -27,6 +27,6 @@
 - TodoForm/`TodoForm.jsx`  `TodoForm.css`
 - Button/`Button.jsx` `Button.css`
 
-# 🖥️Layout
+# 🖥️ Layout
 
 <img src="https://github.com/pigrok/todolist-pjt/assets/129926477/5274316b-cbd9-4679-990e-1fcd971bd8a5" width="2000"/>
