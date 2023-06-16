@@ -1,5 +1,4 @@
-# 📚 Create My Todo List + Introductory React assignments
-
+# 📚 Create My Todo List
 <br/>
 <br/>
 
