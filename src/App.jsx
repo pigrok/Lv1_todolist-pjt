@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Button from "./components/Button";
-import ToDoList from "./components/TodoList";
+import Header from "./components/Header";
+import InputBox from "./components/InputBox";
+import TodoContainer from "./components/TodoContainer";
 
 const App = () => {
   // useState를 통해 초기값을 설정!
@@ -49,8 +50,8 @@ const App = () => {
 
     setToDo([...toDo, newToDo]);
 
-    setTitle(""); // 입력 필드 초기화
-    setContent(""); // 입력 필드 초기화
+    setTitle("");
+    setContent("");
   };
 
   // 삭제 버튼
@@ -73,56 +74,19 @@ const App = () => {
   return (
     <div className="App">
       <div class="container">
-        <div className="header">
-          <div>🌞My Todo List🌞</div>
-        </div>
-        <div className="input-container">
-          <div className="input-box">
-            <div>
-              제목 : &nbsp;
-              <input value={title} onChange={titleChangeHandler} />
-            </div>
-            <div>
-              내용 : &nbsp;
-              <input value={content} onChange={contentChangeHandler} />
-            </div>
-          </div>
-          <div>
-            <Button clickAddButtonHandler={clickAddButtonHandler} />
-          </div>
-        </div>
-        <div className="list-container">
-          <h1 className="todo-title">Working..🏋</h1>
-          <div className="wrapper">
-            {toDo.map((item) => {
-              if (item.isDone === false) {
-                return (
-                  <ToDoList
-                    item={item}
-                    clickCancelButtonHandler={clickCancelButtonHandler}
-                    clickRemoveButtonHandler={clickRemoveButtonHandler}
-                    key={item.id}
-                  />
-                );
-              }
-            })}
-          </div>
-          <h1 className="todo-title">Done!!🙈</h1>
-          <div className="wrapper">
-            {toDo.map((item) => {
-              if (item.isDone === true) {
-                return (
-                  <ToDoList
-                    item={item}
-                    clickCancelButtonHandler={clickCancelButtonHandler}
-                    clickRemoveButtonHandler={clickRemoveButtonHandler}
-                    key={item.id}
-                  />
-                );
-              }
-            })}
-          </div>
-        </div>
+        <Header />
+        <InputBox
+          title={title}
+          content={content}
+          titleChangeHandler={titleChangeHandler}
+          contentChangeHandler={contentChangeHandler}
+          clickAddButtonHandler={clickAddButtonHandler}
+        />
+        <TodoContainer
+          toDo={toDo}
+          clickCancelButtonHandler={clickCancelButtonHandler}
+          clickRemoveButtonHandler={clickRemoveButtonHandler}
+        />
       </div>
     </div>
   );
