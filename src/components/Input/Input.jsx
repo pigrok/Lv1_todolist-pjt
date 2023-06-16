@@ -1,7 +1,8 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button/Button";
+import "./Input.css";
 
-const InputBox = ({
+const Input = ({
   title,
   content,
   titleChangeHandler,
@@ -27,4 +28,4 @@ const InputBox = ({
   );
 };
 
-export default InputBox;
+export default Input;

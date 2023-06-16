@@ -1,0 +1,44 @@
+.input-button {
+  width: 150px;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+  background-color: #a4e2fa;
+
+  border: 1px solid #a4e2fa;
+  border-radius: 5px;
+
+  font-size: 40px;
+}
+
+.todo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.complete-button {
+  width: 130px;
+  height: 40px;
+
+  font-size: 25px;
+
+  background-color: transparent;
+
+  border: 2px solid #e3fdfd;
+  border-radius: 10px;
+}
+
+.delete-button {
+  width: 130px;
+  height: 40px;
+
+  font-size: 25px;
+
+  background-color: transparent;
+  border: 2px solid #e3fdfd;
+  border-radius: 10px;
+}

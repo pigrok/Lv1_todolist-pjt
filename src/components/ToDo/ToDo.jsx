@@ -1,10 +1,7 @@
 import React from "react";
+import "./ToDo.css";
 
-const ToDoList = ({
-  item,
-  clickCancelButtonHandler,
-  clickRemoveButtonHandler,
-}) => {
+const ToDo = ({ item, clickCancelButtonHandler, clickRemoveButtonHandler }) => {
   return (
     <div className="todo-container" key={item.id}>
       <div>
@@ -31,4 +28,4 @@ const ToDoList = ({
   );
 };
 
-export default ToDoList;
+export default ToDo;

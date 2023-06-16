@@ -1,0 +1,28 @@
+.input-container {
+  padding: 30px;
+  border: 1px;
+  /* border-radius: 15px; */
+
+  display: flex;
+  align-items: center;
+
+  background-color: #a4e2fa;
+
+  font-size: 30px;
+}
+
+.input-container input {
+  height: 40px;
+  width: 300px;
+  font-size: 35px;
+  gap: 30px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.input-box {
+  display: flex;
+  /* align-items: center; */
+  gap: 30px;
+}

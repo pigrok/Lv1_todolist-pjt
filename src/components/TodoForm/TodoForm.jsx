@@ -1,7 +1,8 @@
 import React from "react";
-import ToDoList from "./TodoList";
+import ToDo from "../ToDo/ToDo";
+import "./TodoForm.css";
 
-const TodoContainer = ({
+const TodoForm = ({
   toDo,
   clickCancelButtonHandler,
   clickRemoveButtonHandler,
@@ -13,7 +14,7 @@ const TodoContainer = ({
         {toDo.map((item) => {
           if (item.isDone === false) {
             return (
-              <ToDoList
+              <ToDo
                 item={item}
                 clickCancelButtonHandler={clickCancelButtonHandler}
                 clickRemoveButtonHandler={clickRemoveButtonHandler}
@@ -29,7 +30,7 @@ const TodoContainer = ({
         {toDo.map((item) => {
           if (item.isDone === true) {
             return (
-              <ToDoList
+              <ToDo
                 item={item}
                 clickCancelButtonHandler={clickCancelButtonHandler}
                 clickRemoveButtonHandler={clickRemoveButtonHandler}
@@ -44,4 +45,4 @@ const TodoContainer = ({
   );
 };
 
-export default TodoContainer;
+export default TodoForm;

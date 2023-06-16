@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import InputBox from "./components/InputBox";
-import TodoContainer from "./components/TodoContainer";
+import Header from "./components/Header/Header";
+import Input from "./components/Input/Input";
+import TodoForm from "./components/TodoForm/TodoForm";
 
 const App = () => {
   // useState를 통해 초기값을 설정!
@@ -75,14 +75,14 @@ const App = () => {
     <div className="App">
       <div class="container">
         <Header />
-        <InputBox
+        <Input
           title={title}
           content={content}
           titleChangeHandler={titleChangeHandler}
           contentChangeHandler={contentChangeHandler}
           clickAddButtonHandler={clickAddButtonHandler}
         />
-        <TodoContainer
+        <TodoForm
           toDo={toDo}
           clickCancelButtonHandler={clickCancelButtonHandler}
           clickRemoveButtonHandler={clickRemoveButtonHandler}
