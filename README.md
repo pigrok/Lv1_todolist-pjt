@@ -7,7 +7,7 @@
 - Implementing the UI
 - Add a todo
 - Delete a Todo
-- Change a Todo's completion status (Done ↔ In Progress)
+- Change a Todo's completion status (Done ↔ Working)
 
 # ⛏ Assignment guide
 
