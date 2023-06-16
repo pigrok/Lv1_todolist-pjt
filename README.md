@@ -21,11 +21,11 @@
 
 # 📁./src/components/
 
-- `Header.jsx`
-- `Input.jsx`
-- `ToDo.jsx`
-- `TodoForm`
-- `Button.jsx`
+- /Header/`Header.jsx`
+- /Input/`Input.jsx`
+- /ToDo/`ToDo.jsx`
+- /TodoForm/`TodoForm`
+- /Button/`Button.jsx`
 
 # 🖥️Layout
 
