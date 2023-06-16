@@ -1,14 +1,17 @@
 # 📚 Create My Todo List + Introductory React assignments
+
 <br/>
 <br/>
 
 # 🚩 What to implement
+
 - Implementing the UI
 - Add a todo
 - Delete a Todo
 - Change a Todo's completion status (Done ↔ In Progress)
 
 # ⛏ Assignment guide
+
 - Keep the screen configuration the same.
 - Enter a title and content, and click the Add button to add a new todo to your working.
 - Afterward, the title input and content input should be replaced with empty values again.
@@ -18,11 +21,13 @@
 - You are free to implement your own component structure.
 
 # 📁./src/components/
-- `Header.jsx` 
-- `InputBox.jsx`
-- `TodoContainer.jsx`
+
+- `Header.jsx`
+- `Input.jsx`
+- `ToDo.jsx`
+- `TodoForm`
 - `Button.jsx`
 
 # 🖥️Layout
-<img src="https://github.com/pigrok/todolist-pjt/assets/129926477/5274316b-cbd9-4679-990e-1fcd971bd8a5" width="2000"/>
 
+<img src="https://github.com/pigrok/todolist-pjt/assets/129926477/5274316b-cbd9-4679-990e-1fcd971bd8a5" width="2000"/>
